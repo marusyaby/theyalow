@@ -592,7 +592,7 @@ img {
 .devices {
     position: relative;
     margin-top: 0;
-    padding-bottom: 50px;
+    padding-bottom: 68px;
     background-color: #4c4c4c;
     background-image: url("../assets/img/pat-devices.png");
 }
@@ -671,6 +671,7 @@ img {
 
 @media (max-width: 664px) {
     .devices {
+        padding-bottom: 58px;
         background-image: none;
     }
 
@@ -682,6 +683,10 @@ img {
         font-family: "Open Sans", "Arial", sans-serif;
     }
 
+    .devices__img {
+        margin-bottom: 0;
+    }
+
     .devices__label {
         top: 115px;
         left: 30px;
@@ -689,5 +694,28 @@ img {
 
     .devices__list {
         display: none;
+    }
+}
+
+.footer {
+    position: relative;
+    z-index: 2;
+    background-color: #4c4c4c;
+    -webkit-box-shadow: -3px 0 8px black;
+    box-shadow: -3px 0 8px black;
+}
+
+.page-footer__logo-image {
+    width: 221px;
+    height: 51px;
+    margin-top: 6px;
+    margin-bottom: 3px;
+}
+
+@media (max-width: 664px) {
+    .page-footer__logo-image {
+        width: 133px;
+        height: 31px;
+        margin-left: 60px;
     }
 }
