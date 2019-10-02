@@ -529,7 +529,7 @@ img {
 
 @media (max-width: 664px) {
     .features {
-        top: -55px;
+        margin-top: -55px;
         -webkit-box-shadow: none;
         box-shadow: none;
     }
@@ -895,6 +895,31 @@ img {
     background: rgba(255, 255, 255, 0.48);
 }
 
+@media (max-width: 664px) {
+    .posts {
+        background-image: none;
+    }
+
+    .posts__title {
+        display: none;
+    }
+
+    .posts__content-wrapper {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+    }
+
+    .posts__more-button {
+        bottom: 10px;
+    }
+
+    .posts__pagination {
+        display: none;
+    }
+}
+
 .video-item {
     position: relative;
     display: -webkit-box;
@@ -969,6 +994,44 @@ img {
     letter-spacing: 0.01em;
 }
 
+@media (max-width: 664px) {
+    .video-item {
+        width: 640px;
+    }
+
+    .video-item__description {
+        width: calc(50% + 20px);
+        height: 252px;
+        font-size: 29px;
+        -webkit-box-shadow: inset 0 0 0 10px white;
+        box-shadow: inset 0 0 0 10px white;
+    }
+
+    .video-item__video {
+        display: block;
+        width: 325px;
+        height: 252px;
+        border: 10px solid white;
+        -webkit-box-shadow: inset 0 0 0 20px white;
+        box-shadow: inset 0 0 0 20px white;
+    }
+
+    .video-item__video[poster] {
+        z-index: -1;
+        width: 315px;
+        height: 100%;
+        margin-left: -30px;
+    }
+
+    .video-item__more-button {
+        right: 320px;
+    }
+
+    .video-item__time {
+        display: none;
+    }
+}
+
 .tweets {
     position: relative;
     display: -webkit-box;
@@ -984,6 +1047,14 @@ img {
     -ms-flex-negative: 0;
 }
 
+.tweets__list {
+    display: none;
+}
+
+.tweets__add-tweet {
+    display: none;
+}
+
 .tweets__number {
     margin-left: auto;
     padding: 17px;
@@ -991,4 +1062,141 @@ img {
     font-weight: 300;
     font-size: 25px;
     font-family: "Segoe WP", "Arial", sans-serif;
+}
+
+@media (max-width: 664px) {
+    .tweets {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+        background-color: transparent;
+        background-position: 100px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+    }
+
+    .tweets__number {
+        display: none;
+    }
+
+    .tweets__more-button {
+        display: none;
+    }
+
+    .tweets__list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: 0;
+        margin-right: 20px;
+        padding: 0;
+        list-style: none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+    }
+
+    .tweets__item {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 275px;
+        margin-bottom: 14px;
+        padding: 10px;
+        padding-left: 19px;
+        font-size: 13px;
+        font-family: "Arial", sans-serif;
+        color: #8f8e8e;
+        background-color: #ffffff;
+        border-radius: 9px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+    }
+
+    .tweets__item::before {
+        content: "";
+        position: absolute;
+        bottom: 9px;
+        left: -9px;
+        display: block;
+        width: 9px;
+        height: 18px;
+    }
+
+    .tweets__item:first-child::before {
+        background-image: url("../assets/img/balloon1.png");
+    }
+
+    .tweets__item:nth-child(2n) {
+        background-color: #fceeb5;
+    }
+
+    .tweets__item:nth-child(2n)::before {
+        background-image: url("../assets/img/balloon2.png");
+    }
+
+    .tweets__item:nth-child(3n) {
+        background-color: #fbe89c;
+    }
+
+    .tweets__item:nth-child(3n)::before {
+        background-image: url("../assets/img/balloon3.png");
+    }
+
+    .tweets__add-tweet {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-right: 20px;
+    }
+
+    .tweets__input {
+        width: 191px;
+        height: 29px;
+        padding-left: 10px;
+        border: 1px solid #d0a806;
+        border-radius: 9px 0 0 9px;
+        -webkit-box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.11);
+        box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.11);
+    }
+
+    .tweets__input:hover, .tweets__input:active, .tweets__input:focus {
+        outline: none;
+    }
+
+    .tweets__button {
+        width: 68px;
+        height: 33px;
+        font-size: 15px;
+        font-family: "Arial", sans-serif;
+        color: #fff;
+        background: -webkit-gradient(linear, left top, left bottom, from(#eaa927), to(#cf8e0c));
+        background: linear-gradient(#eaa927, #cf8e0c);
+        border: 1px solid #d0a806;
+        border-radius: 0 9px 9px 0;
+    }
+
+    .tweets__button:hover, .tweets__button:active, .tweets__button:focus {
+        outline: none;
+    }
+
+    .tweets__button:active {
+        background: -webkit-gradient(linear, left top, left bottom, from(#cf8e0c), to(#eaa927));
+        background: linear-gradient(#cf8e0c, #eaa927);
+    }
 }
